@@ -8,7 +8,7 @@ const { PORT } = require("./config/env.config");
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use(router);
+app.use("/api", router);
 app.use(errorHandler);
 
 app.listen(PORT, () => {

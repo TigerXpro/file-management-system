@@ -3,10 +3,10 @@ const { createNoteHandler, getNoteByIdHandler, getManyNotesHandler, updateNoteHa
 
 const router = Router()
 
-router.route("/")
+router.route("/notes")
     .post(createNoteHandler)
     .get(getManyNotesHandler);
-router.route("/:id")
+router.route("/notes/:id")
     .get(getNoteByIdHandler)
     .patch(updateNoteHandler)
     .delete(deleteNoteHandler);
